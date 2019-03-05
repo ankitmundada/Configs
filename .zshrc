@@ -2,13 +2,13 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH="/home/mundada/.oh-my-zsh"
+  export ZSH="/home/ankit/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="agnoster"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -65,24 +65,20 @@ ZSH_THEME="robbyrussell"
 plugins=(
     git
     vi-mode
-    zsh-completions
-    history-substring-search
+    zsh-autosuggestions
+    zsh-history-substring-search
+    #
+    # MAKE SURE zsh-syntax-highlighting MUST MUST BE THE LAST PLUGIN. 
+    # zsh-syntax-highlighting
     )
+    
 
-source $ZSH/oh-my-zsh.sh
-
-
-autoload -U compinit && compinit
-
-# bind UP and DOWN arrow keys
-zmodload zsh/terminfo
-bindkey "$terminfo[kcuu1]" history-substring-search-up
-bindkey "$terminfo[kcud1]" history-substring-search-down
-
-
-# bind k and j for VI mode
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
 bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
+
+source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -112,6 +108,3 @@ bindkey -M vicmd 'j' history-substring-search-down
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# GOOGLE CLOUD SDK Path Settings
-export PATH=/home/mundada/Packages/google_appengine:/home/mundada/Packages/google-cloud-sdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
