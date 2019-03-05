@@ -66,7 +66,7 @@ plugins=(
     git
     vi-mode
     zsh-autosuggestions
-    zsh-history-substring-search
+    history-substring-search
     #
     # MAKE SURE zsh-syntax-highlighting MUST MUST BE THE LAST PLUGIN. 
     # zsh-syntax-highlighting
