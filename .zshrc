@@ -109,8 +109,21 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/ankit/Packages/google-cloud-sdk/path.zsh.inc' ]; then . '/home/ankit/Packages/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/ankit/Packages/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/ankit/Packages/google-cloud-sdk/completion.zsh.inc'; fi
+
+# Google App Engine Path settings for older using appcfg
+export PATH=$PATH:~/Packages/google_appengine/
