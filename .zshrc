@@ -127,3 +127,7 @@ if [ -f '/home/ankit/Packages/google-cloud-sdk/completion.zsh.inc' ]; then . '/h
 
 # Google App Engine Path settings for older using appcfg
 export PATH=$PATH:~/Packages/google_appengine/
+
+# DLBox SSH-COMMAND
+alias connect-rig="ssh -L 8888:localhost:8888 xena@122.166.171.113 -p 2222"
+alias gitm="git"
