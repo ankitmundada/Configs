@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH="/home/ankit/.oh-my-zsh"
+  export ZSH="/home/xena/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -119,11 +119,14 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/ankit/Packages/google-cloud-sdk/path.zsh.inc' ]; then . '/home/ankit/Packages/google-cloud-sdk/path.zsh.inc'; fi
+export PATH=/usr/local/cuda-9.0/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64:${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+export PATH=/home/xena/miniconda3/bin${PATH:+:${PATH}}
 
-# The next line enables shell command completion for gcloud.
-if [ -f '/home/ankit/Packages/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/ankit/Packages/google-cloud-sdk/completion.zsh.inc'; fi
-
-# Google App Engine Path settings for older using appcfg
-export PATH=$PATH:~/Packages/google_appengine/
+alias git="echo 'use your own alias'"
+alias gitm='/usr/bin/git -c user.name="Ankit Mundada"     -c user.email="aomundada@gmail.com"'
+alias gitn='/usr/bin/git -c user.name="Arunesh Nandan"    -c user.email="nandanarunesh@gmail.com"'
+alias gits='/usr/bin/git -c user.name="Prateek Sinha"     -c user.email="prateeksinha.kgp@gmail.com"'
+alias gitv='/usr/bin/git -c user.name="Nikhil Vashishtha" -c user.email="nikhilvashishtha@gmail.com"'
+alias gitk='/usr/bin/git -c user.name="Kirnesh Nandan"    -c user.email="nandankirnesh@gmail.com"'
+export HISTTIMEFORMAT="%d/%m/%y %T "
