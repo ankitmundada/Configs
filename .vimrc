@@ -36,8 +36,14 @@ set expandtab
 " " map ESC to CTRL-q
 imap qq <ESC>
 
+" Let's save undo info!
+if !isdirectory($HOME."/.vim")
+    call mkdir($HOME."/.vim", "", 0770)
+endif
+if !isdirectory($HOME."/.vim/undodir")
+    call mkdir($HOME."/.vim/undodir", "", 0770)
+endif
 set undodir=~/.vim/undodir
 set undofile
 set undolevels=1000
 set undoreload=10000
-
