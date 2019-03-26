@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH="/home/xena/.oh-my-zsh"
+  export ZSH="/home/ankit/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -129,5 +129,5 @@ if [ -f '/home/ankit/Packages/google-cloud-sdk/completion.zsh.inc' ]; then . '/h
 export PATH=$PATH:~/Packages/google_appengine/
 
 # DLBox SSH-COMMAND
-alias connect-rig="ssh -L 8888:localhost:8888 xena@122.166.171.113 -p 2222"
+alias connect-rig="ssh -L 8889:localhost:8889 -L 8888:localhost:8888 xena@122.166.171.113 -p 2222"
 alias gitm="git"
