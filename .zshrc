@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH="/home/xena/.oh-my-zsh"
+  export ZSH="/home/ankit/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -119,6 +119,7 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
+# CUDA Paths
 export PATH=/usr/local/cuda-9.0/bin${PATH:+:${PATH}}
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64:${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 #
@@ -146,3 +147,5 @@ alias gits='/usr/bin/git -c user.name="Prateek Sinha"     -c user.email="prateek
 alias gitv='/usr/bin/git -c user.name="Nikhil Vashishtha" -c user.email="nikhilvashishtha@gmail.com"'
 alias gitk='/usr/bin/git -c user.name="Kirnesh Nandan"    -c user.email="nandankirnesh@gmail.com"'
 export HISTTIMEFORMAT="%d/%m/%y %T "
+
+alias ls="ls -A --color=tty -h --sort=time --group-directories-first --ignore='\.git*'"
