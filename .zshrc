@@ -121,7 +121,23 @@ fi
 
 export PATH=/usr/local/cuda-9.0/bin${PATH:+:${PATH}}
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64:${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
-export PATH=/home/xena/miniconda3/bin${PATH:+:${PATH}}
+#
+# added by Miniconda3 4.5.12 installer
+# >>> conda init >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$(CONDA_REPORT_ERRORS=false '/home/xena/miniconda3/bin/conda' shell.bash hook 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    \eval "$__conda_setup"
+else
+    if [ -f "/home/xena/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/xena/miniconda3/etc/profile.d/conda.sh"
+        CONDA_CHANGEPS1=false conda activate base
+    else
+        \export PATH="/home/xena/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda init <<<
 
 alias git="echo 'use your own alias'"
 alias gitm='/usr/bin/git -c user.name="Ankit Mundada"     -c user.email="aomundada@gmail.com"'
