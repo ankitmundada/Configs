@@ -129,3 +129,4 @@ if [ -f '/home/ankit/Packages/google-cloud-sdk/completion.zsh.inc' ]; then . '/h
 export PATH=$PATH:~/Packages/google_appengine/
 
 alias gitm="git"
+alias ls="ls -A --color=tty -h --sort=time --group-directories-first"
