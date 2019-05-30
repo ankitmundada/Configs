@@ -119,14 +119,20 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/ankit/Packages/google-cloud-sdk/path.zsh.inc' ]; then . '/home/ankit/Packages/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/home/ankit/Packages/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/ankit/Packages/google-cloud-sdk/completion.zsh.inc'; fi
-
-# Google App Engine Path settings for older using appcfg
-export PATH=$PATH:~/Packages/google_appengine/
-
 alias gitm="git"
 alias ls="ls -A --color=tty -h --sort=time --group-directories-first --ignore='\.git*'"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/ankit/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/ankit/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/ankit/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/ankit/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
