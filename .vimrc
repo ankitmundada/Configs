@@ -47,3 +47,12 @@ set undodir=~/.vim/undodir
 set undofile
 set undolevels=1000
 set undoreload=10000
+
+" " ------------------------------------------------
+" " CONFIGURATION FOR REMEBERING LAST POSITION
+" " ------------------------------------------------
+
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+endif
+

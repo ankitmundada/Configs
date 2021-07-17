@@ -128,5 +128,36 @@ if [ -f '/home/ankit/Packages/google-cloud-sdk/completion.zsh.inc' ]; then . '/h
 # Google App Engine Path settings for older using appcfg
 export PATH=$PATH:~/Packages/google_appengine/
 
+# Add Android SDK to PATH
+export PATH=$PATH:/usr/local/android-studio/bin
+export PATH=$PATH:/home/ankit/Android/Sdk/platform-tools/
+
+# Dart path
+export PATH=$PATH:/home/ankit/Packages/flutter_stable/bin/
+
+# For ijavascript
+export PATH=$PATH:~/bin
+
+# For mongodb robo 3t
+export PATH=$PATH:~/Packages/robo3t/bin
+
+
 alias gitm="git"
 alias ls="ls -A --color=tty -h --sort=time --group-directories-first --ignore='\.git*'"
+
+# added by Miniconda3 installer
+. /home/ankit/miniconda3/etc/profile.d/conda.sh
+
+
+# copied from bashrc
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export PATH="$PATH":"$HOME/.pub-cache/bin"
+
+alias infi="cd ~/Projects/infireads"
+alias actinfi="conda activate infireads"
+alias flutters="~/Packages/flutter_stable/bin/flutter"
+alias flutterb="~/Packages/flutter_beta/bin/flutter"
+#unalias deactivate ## required to use virtualenv with conda

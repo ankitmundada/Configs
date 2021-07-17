@@ -1,0 +1,9 @@
+Host dlbox
+  HostName 122.166.171.113
+  Port 2222
+  User xena
+  IdentityFile ~/.ssh/id_rsa
+  LocalForward 8889 localhost:8889
+  LocalForward 8888 localhost:8888
+  ServerAliveInterval 3
+  

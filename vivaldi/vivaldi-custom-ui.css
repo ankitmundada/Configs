@@ -1,0 +1,15 @@
+/* Remove Menu Bar aka Header  */
+
+.topmenu {
+    display: none !important; 
+}
+
+
+#header {
+  min-height: 0px;
+}
+
+
+#titlebar .window-buttongroup {
+  display: none;
+}
