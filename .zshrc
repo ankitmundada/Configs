@@ -119,18 +119,12 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/ankit/Packages/google-cloud-sdk/path.zsh.inc' ]; then . '/home/ankit/Packages/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/home/ankit/Packages/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/ankit/Packages/google-cloud-sdk/completion.zsh.inc'; fi
-
-# Google App Engine Path settings for older using appcfg
-export PATH=$PATH:~/Packages/google_appengine/
-
 # Add Android SDK to PATH
 export PATH=$PATH:/usr/local/android-studio/bin
 export PATH=$PATH:/home/ankit/Android/Sdk/platform-tools/
+
+export JAVA_HOME="/usr/lib/jvm/java-1.8.0-openjdk-amd64"
+export PATH=$JAVA_HOME/bin:$PATH
 
 # Dart path
 export PATH=$PATH:/home/ankit/Packages/flutter_stable/bin/
@@ -140,6 +134,8 @@ export PATH=$PATH:~/bin
 
 # For mongodb robo 3t
 export PATH=$PATH:~/Packages/robo3t/bin
+
+export DOTNET_ROOT=/snap/dotnet-sdk/current
 
 
 alias gitm="git"
